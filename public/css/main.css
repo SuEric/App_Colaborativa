@@ -1,0 +1,397 @@
+a {
+  color: #ff7103;
+}
+.btn {
+  background: rgba(255,113,3,0.4);
+  border: none;
+  border-radius: 4px;
+  box-shadow: 1px 1px 5px #003b5c;
+  color: #003b5c;
+  padding: 0.5em;
+  text-decoration: none;
+}
+.btn:hover {
+  background: #003b5c;
+  color: #fff;
+}
+.modal {
+  position: fixed;
+  font-family: Arial, Helvetica, sans-serif;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0,0,0,0.8);
+  z-index: 9999;
+  opacity: 0;
+  -webkit-transition: opacity 400ms ease-in;
+  -moz-transition: opacity 400ms ease-in;
+  transition: opacity 400ms ease-in;
+  pointer-events: none;
+}
+.modal:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+.modal .contenido_modal {
+  background: #eee;
+  border-radius: 10px;
+  height: 80%;
+  margin: 1em auto;
+  overflow: auto;
+  padding: 5px 20px 13px 20px;
+  position: relative;
+  width: 80%;
+}
+.modal .contenido_modal::-webkit-scrollbar {
+  display: none;
+}
+.modal .contenido_modal .cerrar_modal {
+  background: #606061;
+  border-radius: 12px;
+  box-shadow: 1px 1px 3px #000;
+  color: #fff;
+  font-weight: bold;
+  line-height: 25px;
+  position: absolute;
+  right: -2px;
+  text-align: center;
+  text-decoration: none;
+  top: -2px;
+  width: 24px;
+}
+.modal .contenido_modal h2 {
+  margin: 0;
+  padding: 0.5em 0;
+}
+.hide {
+  display: none;
+}
+body {
+  background: #eee;
+  color: #444;
+  font-family: Arial;
+  font-size: 16px;
+}
+footer {
+  background: #003b5c;
+  color: #fff;
+  padding: 1em 0;
+  text-align: center;
+}
+footer .fcc {
+  display: block;
+}
+footer .fcc:before,
+footer .fcc:after {
+  content: " - ";
+}
+footer h3 {
+  font-family: Avenir Next;
+  font-size: 0.8em;
+  font-weight: normal;
+  margin: 0;
+}
+header {
+  background: #003b5c;
+  box-shadow: 0 5px rgba(0,59,92,0.2);
+  color: #fff;
+  font-family: Avenir Next;
+  padding: 0.5em;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+header .logo {
+  border-right: 1px solid #ff7103;
+  float: left;
+  width: 70px;
+}
+header .logo img {
+  width: 62px;
+}
+header .middle {
+  margin: 0 30px 0 80px;
+}
+header .middle .titulo {
+  font-size: 1.2em;
+  font-weight: normal;
+  margin: 0;
+}
+header .middle .subtitulo {
+  color: #00b5e2;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: normal;
+  margin: 0;
+  text-decoration: none;
+}
+header .middle .subtitulo:hover {
+  background: rgba(255,113,3,0.5);
+}
+header .right {
+  position: absolute;
+  top: 0.5em;
+  right: 0.5em;
+}
+header .right img {
+  width: 43px;
+}
+nav {
+  background: #aaa;
+  border-left: 15px solid #00b5e2;
+  position: relative;
+}
+nav:before {
+  border-bottom: 20px solid transparent;
+  border-left: 7px solid #00b5e2;
+  border-top: 20px solid transparent;
+  content: "";
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+nav .menu {
+  height: 40px;
+  line-height: 40px;
+  margin: 0;
+  padding: 0;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+nav .menu::-webkit-scrollbar {
+  display: none;
+}
+nav .menu li {
+  display: inline-block;
+}
+nav .menu li a {
+  color: #003b5c;
+  display: block;
+  padding: 0 1em;
+  text-decoration: none;
+}
+nav .menu li a:hover {
+  background: rgba(0,59,92,0.2);
+}
+.secciones {
+  padding: 1em;
+  clear: left;
+}
+.secciones .content {
+  margin-bottom: 1em;
+  padding: 0.5em;
+}
+.secciones .content .content_titular {
+  font-weight: normal;
+  margin: 0 0 0.5em 0;
+  padding: 0;
+}
+.secciones .seccion {
+  box-shadow: 2px 2px 10px rgba(0,59,92,0.5);
+  margin-bottom: 10px;
+  text-align: center;
+}
+.secciones .seccion .contenido {
+  background: rgba(0,59,92,0.2);
+  border-top: 2px solid #003b5c;
+  height: 160px;
+  padding: 0.5em;
+  overflow: hidden;
+  text-align: left;
+}
+.secciones .seccion .contenido .tabla {
+  border: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+  display: block;
+  height: 160px;
+  margin: 0 auto;
+  padding: 0;
+  overflow: auto;
+}
+.secciones .seccion .contenido .tabla::-webkit-scrollbar {
+  display: none;
+}
+.secciones .seccion .contenido .tabla tbody {
+  display: block;
+  height: 160px;
+}
+.secciones .seccion .contenido .tabla tbody tr {
+  background: rgba(255,255,255,0.8);
+  border: 1px solid #003b5c;
+  border-bottom: 2px solid #003b5c;
+  margin-bottom: 10px;
+}
+.secciones .seccion .contenido .tabla tbody tr td {
+  border-bottom: 1px dotted #003b5c;
+  text-align: right;
+  padding: 0.6em;
+  vertical-align: top;
+}
+.secciones .seccion .contenido .tabla tbody tr td:before {
+  content: attr(data-label);
+  float: left;
+  font-weight: bold;
+  margin-right: 1.5em;
+  text-transform: uppercase;
+}
+.secciones .seccion .contenido .tabla tbody tr td:last-child {
+  border-bottom: 0;
+}
+.secciones .seccion .contenido .tabla tbody tr td:hover {
+  background: rgba(0,0,0,0.3);
+}
+.secciones .seccion .contenido .tabla tbody tr td .agregar_revisor {
+  display: block;
+  margin: 0 0 0 auto;
+  text-decoration: none;
+  width: 40px;
+}
+.secciones .seccion .contenido .tabla tbody tr td .agregar_revisor:before {
+  content: "\e973";
+  color: #003b5c;
+  font-family: "iconitos";
+  font-size: 2em;
+  font-variant: normal;
+  line-height: 1;
+  speak: none;
+  text-transform: none;
+  vertical-align: middle;
+}
+.secciones .seccion .contenido .tabla tbody tr td .dictamen_final {
+  text-decoration: none;
+}
+.secciones .seccion .contenido .tabla tbody tr td .dictamen_final:before {
+  content: "\e9a8";
+  color: #003b5c;
+  font-family: "iconitos";
+  font-size: 2.5em;
+  font-variant: normal;
+  line-height: 1;
+  speak: none;
+  text-transform: none;
+  vertical-align: middle;
+}
+.secciones .seccion .contenido .tabla tbody tr td .tablita {
+  display: inline-block;
+  font-size: 0.8em;
+  width: 50%;
+}
+.secciones .seccion .contenido .tabla tbody tr td .tablita tbody {
+  height: auto;
+}
+.secciones .seccion .contenido .tabla tbody tr td .tablita tbody tr {
+  background: rgba(255,113,3,0.4);
+}
+.secciones .seccion .contenido .tabla tbody tr td .tablita tbody tr td .eliminar_revisor {
+  display: inline-block;
+  margin-left: 1em;
+  text-decoration: none;
+}
+.secciones .seccion .contenido .tabla tbody tr td .tablita tbody tr td .eliminar_revisor:before {
+  color: #003b5c;
+  content: "\e974";
+  font-family: "iconitos";
+  font-size: 1.4em;
+  font-variant: normal;
+  line-height: 1;
+  speak: none;
+  text-transform: none;
+  vertical-align: middle;
+}
+.secciones .seccion .contenido .tabla tbody tr td .tablita thead th {
+  padding: 0.6em;
+}
+.secciones .seccion .contenido .tabla thead {
+  display: none;
+}
+.secciones .seccion .contenido .tabla thead th {
+  background: rgba(255,113,3,0.4);
+  padding: 0.8em;
+  letter-spacing: 1px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.secciones .seccion .contenido .tabla tr,
+.secciones .seccion .contenido .tabla td {
+  display: block;
+}
+.secciones .seccion .titular {
+  background: rgba(255,113,3,0.8);
+  color: #fff;
+  font-family: Avenir Next;
+  font-size: 1.1em;
+  font-style: italic;
+  font-weight: normal;
+  margin: 0;
+  padding: 0.5em 0;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  header .logo {
+    width: 100px;
+  }
+  header .logo img {
+    width: 92px;
+  }
+  header .middle {
+    margin: 0 30px 0 110px;
+  }
+  header .middle .titulo {
+    font-size: 1.7em;
+  }
+  header .middle .subtitulo {
+    font-size: 1.5em;
+  }
+  header .right img {
+    width: 77px;
+  }
+  .secciones .content .content_titular {
+    font-size: 1em;
+  }
+  .secciones .seccion .contenido {
+    height: 260px;
+    overflow: auto;
+  }
+  .secciones .seccion .contenido::-webkit-scrollbar {
+    display: none;
+  }
+  .secciones .seccion .contenido .tabla {
+    display: table;
+    background: #fff;
+    height: 260px;
+  }
+  .secciones .seccion .contenido .tabla tbody {
+    display: table-row-group;
+    height: 260px;
+  }
+  .secciones .seccion .contenido .tabla tbody tr:hover {
+    background: rgba(0,0,0,0.3);
+  }
+  .secciones .seccion .contenido .tabla tbody tr td:before {
+    content: none;
+  }
+  .secciones .seccion .contenido .tabla tbody tr td:hover {
+    background: none;
+  }
+  .secciones .seccion .contenido .tabla tbody tr td .tablita {
+    display: table;
+    width: 100%;
+  }
+  .secciones .seccion .contenido .tabla tbody tr td .tablita tbody tr {
+    background: none;
+  }
+  .secciones .seccion .contenido .tabla thead {
+    display: table-header-group;
+  }
+  .secciones .seccion .contenido .tabla td {
+    border-bottom: none;
+    display: table-cell;
+    text-align: center;
+  }
+  .secciones .seccion .contenido .tabla tr {
+    border: 1px solid #003b5c;
+    display: table-row;
+  }
+}
