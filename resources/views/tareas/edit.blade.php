@@ -41,7 +41,6 @@
         </p>
         <p>
             <a href="#" class="btn btn_modificar_tarea">Guardar</a>
-            <a href="#" class="btn btn_eliminar_tarea">Eliminar</a>
         </p>
         @if ( count($tarea->actividades) != 0 )
         <table class="tabla">

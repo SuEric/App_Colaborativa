@@ -131,6 +131,25 @@ $(document).ready(function() {
 		}
 	});
 
+	$('#btn_eliminar_tarea').on('click', function(ev) {
+		ev.preventDefault();
+
+		var tarea_id_attr = $(this).parents('tr').attr('id');
+		var id = tarea_id_attr.substring(6, tarea_id_attr.length);
+
+		$.ajax({
+				headers: {
+					'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+	         },
+				url : '/tareas/' + id,
+				type : 'delete',
+				dataType : 'json',
+				success: function(dato) {
+					location.reload();
+				}
+		});
+	});
+
 	$('.btn_modificar_tarea').on('click', function(ev) {
 		ev.preventDefault();
 		if ($('#tarea').val() == "") {
@@ -342,6 +361,26 @@ $(document).ready(function() {
 		}
 	});
 
+	$('#btn_eliminar_fase').on('click', function(ev) {
+		
+		ev.preventDefault();
+
+		var fase_id_attr = $(this).parents('tr').attr('id');
+		var id = fase_id_attr.substring(5, fase_id_attr.length);
+
+		$.ajax({
+				headers: {
+					'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+	         },
+				url : '/fases/' + id,
+				type : 'delete',
+				dataType : 'json',
+				success: function(dato) {
+					location.reload();
+				}
+		});
+	});
+
 	$('.btn_fase_modificar_tarea').on('click', function(ev) {
 		ev.preventDefault();
 		if ($('#tarea').val() == "") {
@@ -487,6 +526,25 @@ $(document).ready(function() {
 				}
 			});
 		}
+	});
+
+	$('#btn_eliminar_rol').on('click', function(ev) {
+		ev.preventDefault();
+
+		var rol_id_attr = $(this).parents('tr').attr('id');
+		var id = rol_id_attr.substring(4, rol_id_attr.length);
+
+		$.ajax({
+				headers: {
+					'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+	         },
+				url : '/roles/' + id,
+				type : 'delete',
+				dataType : 'json',
+				success: function(dato) {
+					location.reload();
+				}
+		});
 	});
 
 	$("#rol_datalist").on('input', function () {

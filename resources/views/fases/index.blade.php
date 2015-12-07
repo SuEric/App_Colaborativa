@@ -20,10 +20,11 @@
             </thead>
             <tbody class="cuerpo">
                 @foreach ($fases as $fase)
-                <tr>
+                <tr id="fase-{{$fase->fase_id}}">
                     <td data-label="Fase">{{ $fase->nombre }}</td>
                     <td data-label="Acción">
                         <a href="/fases/{{$fase->fase_id}}/edit" class="btn">Modificar</a>
+                        <a id="btn_eliminar_fase" href="#" class="btn">Eliminar</a>
                     </td>
                 </tr>
                 @endforeach

@@ -114,7 +114,10 @@ class RolController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $rol = Rol::find($id);
+        $rol->delete();
+
+        return response()->json($rol, 200);
     }
 
     public function control() {

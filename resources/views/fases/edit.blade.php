@@ -25,7 +25,6 @@
         </p>
         <p>
             <a href="#" class="btn btn_modificar_fase">Guardar</a>
-            <a href="#" class="btn btn_eliminar_fase">Eliminar</a>
         </p>
         @if ( count($fase->tareas) != 0)
         <table class="tabla">
@@ -47,7 +46,7 @@
                     </td>
                     <td>
                         <a href="#" class="btn btn_fase_modificar_tarea">Guardar</a>
-                        <a href="#" class="btn btn_fase_eliminar_tarea">Eliminar</a>
+                        <a href="#" class="btn">Eliminar</a>
                     </td>
                 </tr>
                 @endforeach

@@ -48,7 +48,6 @@
                     </td>
                     <td>
                         <a href="#" class="btn btn_fase_modificar_tarea">Guardar</a>
-                        <a href="#" class="btn btn_fase_eliminar_tarea">Eliminar</a>
                     </td>
                 </tr>
                 @endforeach

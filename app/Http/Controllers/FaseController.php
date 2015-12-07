@@ -130,7 +130,10 @@ class FaseController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $fase = Fase::find($id);
+        $fase->delete();
+
+        return response()->json($fase, 200);
     }
 
     public function controlTareas($id) {

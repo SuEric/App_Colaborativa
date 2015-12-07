@@ -102,7 +102,10 @@ class TareaController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $tarea = Tarea::find($id);
+        $tarea->delete();
+
+        return response()->json($tarea, 200);
     }
 
     public function updatePriority(Request $request, $id) {
