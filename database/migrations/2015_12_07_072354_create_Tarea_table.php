@@ -16,7 +16,7 @@ class CreateTareaTable extends Migration {
 		{
 			$table->integer('tarea_id', true);
 			$table->string('nombre', 45);
-			$table->text('descripcion')->nullable();
+			$table->text('descripcion', 65535)->nullable();
 			$table->boolean('prioridad')->nullable();
 			$table->boolean('tipo')->nullable();
 			$table->integer('precedente_id')->nullable()->index('fk_Tarea_Tarea1_idx');

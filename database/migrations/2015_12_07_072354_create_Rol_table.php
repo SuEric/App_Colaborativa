@@ -16,7 +16,7 @@ class CreateRolTable extends Migration {
 		{
 			$table->integer('rol_id', true);
 			$table->string('nombre', 45);
-			$table->text('descripcion')->nullable();
+			$table->text('descripcion', 65535)->nullable();
 			$table->boolean('privilegio')->nullable();
 		});
 	}

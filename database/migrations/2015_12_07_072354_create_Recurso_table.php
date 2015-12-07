@@ -3,7 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 
-class CreateActividadTable extends Migration {
+class CreateRecursoTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,12 +12,11 @@ class CreateActividadTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('Actividad', function(Blueprint $table)
+		Schema::create('Recurso', function(Blueprint $table)
 		{
-			$table->integer('actividad_id', true);
+			$table->integer('recurso_id', true);
 			$table->string('nombre', 45);
-			$table->text('descripcion')->nullable();
-			$table->integer('tarea_id')->index('fk_Actividad_Tarea1_idx');
+			$table->text('descripcion', 65535)->nullable();
 		});
 	}
 
@@ -29,7 +28,7 @@ class CreateActividadTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('Actividad');
+		Schema::drop('Recurso');
 	}
 
 }

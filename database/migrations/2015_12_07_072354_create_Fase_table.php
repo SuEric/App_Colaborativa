@@ -16,7 +16,7 @@ class CreateFaseTable extends Migration {
 		{
 			$table->integer('fase_id', true);
 			$table->string('nombre', 45);
-			$table->text('descripcion')->nullable();
+			$table->text('descripcion', 65535)->nullable();
 			$table->boolean('prioridad')->nullable();
 		});
 	}
