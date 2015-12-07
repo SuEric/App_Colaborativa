@@ -14,7 +14,7 @@ class AddForeignKeysToActividadTable extends Migration {
 	{
 		Schema::table('Actividad', function(Blueprint $table)
 		{
-			$table->foreign('tarea_id', 'fk_Actividad_Tarea1')->references('tarea_id')->on('Tarea')->onUpdate('NO ACTION')->onDelete('NO ACTION');
+			$table->foreign('tarea_id', 'fk_Actividad_Tarea1')->references('tarea_id')->on('Tarea')->onUpdate('CASCADE')->onDelete('CASCADE');
 		});
 	}
 

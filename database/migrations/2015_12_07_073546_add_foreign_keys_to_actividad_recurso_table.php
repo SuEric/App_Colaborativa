@@ -14,8 +14,8 @@ class AddForeignKeysToActividadRecursoTable extends Migration {
 	{
 		Schema::table('actividad_recurso', function(Blueprint $table)
 		{
-			$table->foreign('actividad_id', 'fk_Recurso_has_Actividad_Actividad1')->references('actividad_id')->on('Actividad')->onUpdate('NO ACTION')->onDelete('NO ACTION');
-			$table->foreign('recurso_id', 'fk_Recurso_has_Actividad_Recurso1')->references('recurso_id')->on('Recurso')->onUpdate('NO ACTION')->onDelete('NO ACTION');
+			$table->foreign('actividad_id', 'fk_Recurso_has_Actividad_Actividad1')->references('actividad_id')->on('Actividad')->onUpdate('CASCADE')->onDelete('CASCADE');
+			$table->foreign('recurso_id', 'fk_Recurso_has_Actividad_Recurso1')->references('recurso_id')->on('Recurso')->onUpdate('CASCADE')->onDelete('CASCADE');
 		});
 	}
 

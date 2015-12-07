@@ -14,8 +14,8 @@ class AddForeignKeysToRolUsuarioTable extends Migration {
 	{
 		Schema::table('rol_usuario', function(Blueprint $table)
 		{
-			$table->foreign('rol_id', 'fk_Usuario_has_Rol_Rol1')->references('rol_id')->on('Rol')->onUpdate('NO ACTION')->onDelete('NO ACTION');
-			$table->foreign('usuario_id', 'fk_Usuario_has_Rol_Usuario1')->references('usuario_id')->on('Usuario')->onUpdate('NO ACTION')->onDelete('NO ACTION');
+			$table->foreign('rol_id', 'fk_Usuario_has_Rol_Rol1')->references('rol_id')->on('Rol')->onUpdate('CASCADE')->onDelete('CASCADE');
+			$table->foreign('usuario_id', 'fk_Usuario_has_Rol_Usuario1')->references('usuario_id')->on('Usuario')->onUpdate('CASCADE')->onDelete('CASCADE');
 		});
 	}
 

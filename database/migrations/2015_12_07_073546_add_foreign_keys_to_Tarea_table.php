@@ -14,7 +14,7 @@ class AddForeignKeysToTareaTable extends Migration {
 	{
 		Schema::table('Tarea', function(Blueprint $table)
 		{
-			$table->foreign('precedente_id', 'fk_Tarea_Tarea1')->references('tarea_id')->on('Tarea')->onUpdate('NO ACTION')->onDelete('NO ACTION');
+			$table->foreign('precedente_id', 'fk_Tarea_Tarea1')->references('tarea_id')->on('Tarea')->onUpdate('CASCADE')->onDelete('SET NULL');
 		});
 	}
 

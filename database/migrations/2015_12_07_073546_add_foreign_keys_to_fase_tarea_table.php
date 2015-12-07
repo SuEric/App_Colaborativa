@@ -14,8 +14,8 @@ class AddForeignKeysToFaseTareaTable extends Migration {
 	{
 		Schema::table('fase_tarea', function(Blueprint $table)
 		{
-			$table->foreign('fase_id', 'fk_Fase_has_Tarea_Fase1')->references('fase_id')->on('Fase')->onUpdate('NO ACTION')->onDelete('NO ACTION');
-			$table->foreign('tarea_id', 'fk_Fase_has_Tarea_Tarea1')->references('tarea_id')->on('Tarea')->onUpdate('NO ACTION')->onDelete('NO ACTION');
+			$table->foreign('fase_id', 'fk_Fase_has_Tarea_Fase1')->references('fase_id')->on('Fase')->onUpdate('CASCADE')->onDelete('CASCADE');
+			$table->foreign('tarea_id', 'fk_Fase_has_Tarea_Tarea1')->references('tarea_id')->on('Tarea')->onUpdate('CASCADE')->onDelete('CASCADE');
 		});
 	}
 

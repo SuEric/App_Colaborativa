@@ -14,7 +14,7 @@ class AddForeignKeysToHistorialTable extends Migration {
 	{
 		Schema::table('Historial', function(Blueprint $table)
 		{
-			$table->foreign('recurso_id', 'fk_Historial_Recurso1')->references('recurso_id')->on('Recurso')->onUpdate('NO ACTION')->onDelete('NO ACTION');
+			$table->foreign('recurso_id', 'fk_Historial_Recurso1')->references('recurso_id')->on('Recurso')->onUpdate('CASCADE')->onDelete('CASCADE');
 		});
 	}
 
