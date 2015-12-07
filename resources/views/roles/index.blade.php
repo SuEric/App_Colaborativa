@@ -28,7 +28,7 @@
                     <td data-label="Privilegio"> {{ $rol->privilegio }} </td>
                     <td data-label="Acción">
                         <a href="roles/{{ $rol->rol_id }}/edit" class="btn">Modificar</a>
-                        <a id="btn_eliminar_rol" href="#" class="btn">Eliminar</a>
+                        <a href="#" class="btn btn_eliminar_rol">Eliminar</a>
                     </td>
                 </tr>
                 @endforeach

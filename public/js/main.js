@@ -131,7 +131,7 @@ $(document).ready(function() {
 		}
 	});
 
-	$('#btn_eliminar_tarea').on('click', function(ev) {
+	$('.btn_eliminar_tarea').on('click', function(ev) {
 		ev.preventDefault();
 
 		var tarea_id_attr = $(this).parents('tr').attr('id');
@@ -361,7 +361,7 @@ $(document).ready(function() {
 		}
 	});
 
-	$('#btn_eliminar_fase').on('click', function(ev) {
+	$('.btn_eliminar_fase').on('click', function(ev) {
 		
 		ev.preventDefault();
 
@@ -528,7 +528,7 @@ $(document).ready(function() {
 		}
 	});
 
-	$('#btn_eliminar_rol').on('click', function(ev) {
+	$('.btn_eliminar_rol').on('click', function(ev) {
 		ev.preventDefault();
 
 		var rol_id_attr = $(this).parents('tr').attr('id');

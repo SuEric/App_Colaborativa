@@ -24,7 +24,7 @@
                     <td data-label="Fase">{{ $fase->nombre }}</td>
                     <td data-label="Acción">
                         <a href="/fases/{{$fase->fase_id}}/edit" class="btn">Modificar</a>
-                        <a id="btn_eliminar_fase" href="#" class="btn">Eliminar</a>
+                        <a href="#" class="btn btn_eliminar_fase">Eliminar</a>
                     </td>
                 </tr>
                 @endforeach

@@ -59,7 +59,7 @@
                     </td>
                     <td data-label="Acción">
                         <a href="/tareas/{{$tarea->tarea_id}}/edit" class="btn">Modificar</a>
-                        <a id="btn_eliminar_tarea" href="#" class="btn">Eliminar</a>
+                        <a href="#" class="btn btn_eliminar_tarea">Eliminar</a>
                     </td>
                 </tr>
                 @endforeach
